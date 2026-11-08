@@ -1,0 +1,59 @@
+:root{--gold:#e9c66e;--ink:#f6e7d0;--wine:#3a0b16}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;
+  background:linear-gradient(rgba(12,2,8,.82),rgba(12,2,8,.92)),url("/assets/bg.jpg") center/cover fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
+.title{font-size:clamp(44px,8vw,96px);margin:0;letter-spacing:.06em;color:var(--gold)}
+.kicker{font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin:28px 0 8px}
+.role{font-style:italic;margin:4px 0 16px}
+.lead{font-size:20px;line-height:1.6;max-width:70ch}
+.hero{width:100%;height:auto;border:6px solid var(--gold);border-radius:6px;margin:24px 0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:24px 0}
+.facts div{background:var(--wine);border:1px solid var(--gold);border-radius:8px;padding:12px 16px}
+.facts dt{font-size:11px;letter-spacing:.25em;text-transform:uppercase;opacity:.7}
+.facts dd{margin:6px 0 0;font-size:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
+.card{display:block;border:2px solid var(--gold);border-radius:6px;overflow:hidden;background:var(--wine);transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card img{width:100%;height:auto;display:block}
+.card span{display:block;padding:10px;text-align:center;letter-spacing:.2em;text-transform:uppercase}
+.cols{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;margin-top:20px}
+.frame{align-self:start;padding:10px;border-radius:4px;background:linear-gradient(160deg,#fbe9b0,#d4a748 25%,#8a5c1c 50%,#e9c66e 75%,#a8761f);
+  box-shadow:0 0 0 2px #2a1806,0 18px 40px rgba(0,0,0,.6),0 0 40px rgba(233,198,110,.15)}
+.photo{display:block;width:100%;height:auto;border:4px solid #3a0b16}
+.back,.pager a{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.pager{display:flex;justify-content:space-between;margin-top:48px}
+.video{position:relative;aspect-ratio:16/9;border:2px solid var(--gold);border-radius:8px;overflow:hidden;background:#000}
+.video button,.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;
+  background-size:cover;background-position:center}
+.video button span{font-size:48px;color:#fff;text-shadow:0 2px 12px #000}
+.muted{opacity:.7;font-style:italic}
+@media(max-width:800px){.cols{grid-template-columns:1fr}}
+
+.door-stage{--r:clamp(60px,12vw,110px);position:relative;aspect-ratio:16/9;border-radius:var(--r) var(--r) 3px 3px;padding:7px;
+  background:linear-gradient(160deg,#fbe9b0,#d4a748 22%,#8a5c1c 45%,#e9c66e 68%,#a8761f);
+  box-shadow:0 0 0 2px #2a1806,0 16px 34px rgba(0,0,0,.6);perspective:1200px}
+.door-room{position:absolute;inset:7px;border-radius:calc(var(--r) - 7px) calc(var(--r) - 7px) 0 0;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 90%,#fff0c4,#ffb55a 26%,#b8481e 58%,#3a0d08);display:grid;place-items:center}
+.door-room .video{width:100%;border-radius:0;border:0}
+.door-btn{position:absolute;inset:7px;padding:0;border:0;background:none;cursor:pointer;display:block;overflow:hidden;border-radius:calc(var(--r) - 7px) calc(var(--r) - 7px) 0 0}
+.door-btn:disabled{pointer-events:none}
+.leaf{position:absolute;top:0;bottom:0;width:calc(50% - 1px);display:block;transition:transform .9s cubic-bezier(.5,0,.2,1);
+  background:repeating-linear-gradient(90deg,rgba(0,0,0,.2) 0 1px,transparent 1px 6px),linear-gradient(90deg,#240a07,#4d180f 55%,#2c0d08);
+  box-shadow:inset 0 0 0 2px #170604,inset 0 0 26px rgba(0,0,0,.8)}
+.leaf.l{left:0;transform-origin:left;border-radius:calc(var(--r) - 7px) 0 0 0}
+.leaf.r{right:0;transform-origin:right;border-radius:0 calc(var(--r) - 7px) 0 0}
+.leaf i{position:absolute;left:8%;right:8%;border:1px solid rgba(233,198,110,.75);border-radius:3px;background:rgba(255,255,255,.05);
+  box-shadow:inset 0 0 0 3px rgba(20,5,3,.45)}
+.leaf i:first-child{top:9%;height:50%}
+.leaf i:last-child{bottom:9%;height:26%}
+.leaf.l i:first-child{border-radius:calc(var(--r)*.8) 3px 3px 3px}
+.leaf.r i:first-child{border-radius:3px calc(var(--r)*.8) 3px 3px}
+.door-stage:not(.open) .door-btn:hover .l{transform:rotateY(7deg)}
+.door-stage:not(.open) .door-btn:hover .r{transform:rotateY(-7deg)}
+.open .l{transform:rotateY(104deg)}
+.open .r{transform:rotateY(-104deg)}
+.door-hint{position:absolute;right:4%;bottom:10%;background:#f6e7bd;color:#3a0b16;font-style:italic;padding:8px 16px;border-radius:18px 18px 4px 18px;
+  box-shadow:0 4px 14px rgba(0,0,0,.5);transition:opacity .3s}
+.open .door-hint{opacity:0}

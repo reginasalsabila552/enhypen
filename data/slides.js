@@ -1,0 +1,31 @@
+export const SLIDES = [
+  { id: "group", mode: "group", name: "ENHYPEN", role: "Six souls, one night", img: "/assets/group",
+    lead: "ENHYPEN is a South Korean boy group formed through the survival show I-LAND, who debuted on November 30, 2020 with the mini album BORDER : DAY ONE. They are known for their distinctive vampire fantasy concept. Since March 10, 2026, ENHYPEN has continued its activities as a six-member group.",
+    facts: [
+      ["Debut", "November 30, 2020"],
+      ["Agency", "Belift Lab"],
+      ["Formed through", "I-LAND"],
+      ["Fandom", "ENGENE"],
+      ["Members", "Jungwon, Jay, Jake, Sunghoon, Sunoo, Ni-ki", true],
+    ] },
+  { id: "jungwon", mode: "member", name: "Jungwon", role: "Leader", img: "/assets/jungwon", youtube: "",
+    lead: "Jungwon is the leader of ENHYPEN.",
+    facts: [["Birth name", "Yang Jung-won"], ["Date of birth", "February 9, 2004"]] },
+  { id: "jay", mode: "member", name: "Jay", role: "Member", img: "/assets/jay", youtube: "",
+    lead: "Jay (Park Jong-seong) is a member of ENHYPEN.",
+    facts: [["Birth name", "Park Jong-seong"], ["Date of birth", "April 20, 2002"]] },
+  { id: "jake", mode: "member", name: "Jake", role: "Member", img: "/assets/jake", youtube: "",
+    lead: "Jake (Shim Jae-yoon) is a member of ENHYPEN. He grew up in Australia.",
+    facts: [["Birth name", "Shim Jae-yoon"], ["Date of birth", "November 15, 2002"]] },
+  { id: "sunghoon", mode: "member", name: "Sunghoon", role: "Member", img: "/assets/sunghoon", youtube: "",
+    lead: "Sunghoon (Park Sung-hoon) is a member of ENHYPEN. Before debuting, he was known as a figure skater.",
+    facts: [["Birth name", "Park Sung-hoon"], ["Date of birth", "December 8, 2002"]] },
+  { id: "sunoo", mode: "member", name: "Sunoo", role: "Member", img: "/assets/sunoo", youtube: "",
+    lead: "Sunoo (Kim Sun-woo) is a member of ENHYPEN.",
+    facts: [["Birth name", "Kim Sun-woo"], ["Date of birth", "June 24, 2003"]] },
+  { id: "niki", mode: "member", name: "Ni-ki", role: "Member", img: "/assets/niki", youtube: "",
+    lead: "Ni-ki (Nishimura Riki) is the youngest member (maknae) of ENHYPEN, born in Japan.",
+    facts: [["Birth name", "Nishimura Riki"], ["Date of birth", "December 9, 2005"]] },
+];
+
+export const LOREM = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
