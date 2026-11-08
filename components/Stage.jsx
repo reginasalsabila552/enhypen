@@ -4,6 +4,7 @@ import { SLIDES } from "@/data/slides";
 import VoicePill from "./VoicePill";
 import Embers from "./Embers";
 import Flames from "./Flames";
+import Welcome from "./Welcome";
 import { useMoonPlacement } from "@/lib/useMoon";
 import { KnockDoor, Room } from "./Door";
 import { useDoor } from "@/lib/useDoor";
@@ -158,6 +159,7 @@ export default function Stage() {
   </footer>
 </main>
 
+<Welcome />
 <Room slide={s} index={current} state={door.state} origin={door.origin} scrollRef={door.scrollEl} onLeave={door.leave} />
 
     </>
