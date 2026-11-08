@@ -1,4 +1,4 @@
-# ENHYPEN — Blood Moon Hall
+# ENHYPEN - From Egin To Enhypen
 
 An interactive, fan-made profile website for the K-pop group **ENHYPEN**, built around a gothic "vampire hall" theme: a blood moon over a castle, flickering candles, a floating golden frame, and a door you knock on to step into each member's room.
 
@@ -105,13 +105,3 @@ All text lives in `data/slides.js`. Each member entry looks like this:
 ## Architecture Notes
 
 The member pages and most of the home page UI (slide state, details, voice, door, room, embers, flames) are React components driven by state and effects. The flip, drag, and scroll-driven flight of the frame are written imperatively in `lib/stage.js` and started from `Stage.jsx` inside an effect, with full cleanup on unmount.
-
-## Deployment
-
-1. Push the repository to GitHub.
-2. Import it at [vercel.com/new](https://vercel.com/new).
-3. Deploy. No environment variables are needed.
-
-## License
-
-No license has been chosen yet. Add one (for example MIT) before accepting contributions.
